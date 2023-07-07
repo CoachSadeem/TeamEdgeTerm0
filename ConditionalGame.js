@@ -1,304 +1,196 @@
-const READLINE = require("readline-sync");
-/* -------------------------------------------- 
-
-	You've just learned about variables, conditionals.
-	Just from knowing those two topics, you can do so much!
-	
-	Let's try to make a simple program that responds to the user.
-	We're going to recreate the Magic 8 Ball!!!
-			
-			Never heard of it? That's ok!
-
-					You got this!
-
-  -------------------------------------------- 
-
-	How a Magic 8 Ball Works:
-
-	The user asks a question and vigoriously shakes the ball. 
-	Then the ball will respond with one of twenty responses, chosen at random. 
-
-	That's pretty simple right?
-
-  -------------------------------------------- 
-
-	Part 1: 
-	Print instructions on the screen and 
-	prompt the user to ask a question
-
-	Tip: Don't forget to import the readline-sync module!
-
-  -------------------------------------------- */
-
-// let question = READLINE.question("Please ask a question: ");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* -------------------------------------------- 
-
-	Part 2: Next, we need to randomly select a response from 20 options.
-
-	Randomly select a number from 0 - 19 
-	Use that to select from the following responses:
-		0 - It is certain.
-		1 - It is decidedly so.
-		2 - Without a doubt.
-		3 - Yes - definitely.
-		4 - You may rely on it.
-		5 - As I see it, yes.
-		6 - Most likely.
-		7 - Outlook good.
-		8 - Yes.
-		9 - Signs point to yes.
-		10 - Reply hazy, try again.
-		11 - Ask again later.
-		12 - Better not tell you now.
-		13 - Cannot predict now.
-		14 - Concentrate and ask again.
-		15 - Don't count on it.
-		16 - My reply is no.
-		17 - My sources say no.
-		18 - Outlook not so good.
-		19 - Very doubtful.
-
-	Look up Math.random to see how you can use it to select a random number.
-
-  -------------------------------------------- */
-
-for (let i = 0; i < 50; i++) {
-	let randomNum = Math.floor(Math.random() * 20);
-}
-
-
-// console.log(`The answer to your question: ${question} is $)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* -------------------------------------------- 
-
-	Part 3: Customize it!
-
-	Select your own theme and use case and modify your code!
-	
-  -------------------------------------------- */
-
-
+const READLINE = require("readline-sync"); // needed to get input
 
 console.log("\nWelcome to the Superhero Fortune Teller");
 console.log("Using the first letter of your first and last name, and your birth month");
 console.log("I will be able to get your super hero Name and Power!");
 
-let Firstname = READLINE.question("\nWhat is the first letter of your first name? ");
-let Lastname = READLINE.question("What is the first letter of your last name? ");
+// Getting my values for the quiz
+let firstName = READLINE.question("\nWhat is the first letter of your first name? ");
+let lastName = READLINE.question("What is the first letter of your last name? ");
 let Month = READLINE.question("What is the number of the month you were born in? (October = 10) ");
 console.log();
 
+// Creating empty strings for the name and power
 let Superhero_Name_1 = "";
 let Superhero_Name_2 = "";
 let Power = "";
 
-Firstname = Firstname.toUpperCase();
-Lastname = Lastname.toUpperCase();
+// making the first letter capital so I can compare it in my if statement
+// a -> A
+firstName = firstName.toUpperCase();
+lastName = lastName.toUpperCase();
 
-if (Firstname.length > 1 || Lastname.length > 1 || (Month < 0 || Month > 12)) {
-	console.log("please enter the correct values");
-}
-
-if (Firstname == "A") {
+// getting the first half of the super hero name
+if (firstName == "A") {
 	Superhero_Name_1 = "Iron";
 }
-else if (Firstname == "B") {
+else if (firstName == "B") {
 	Superhero_Name_1 = "Bat";
 }
-else if (Firstname == "C") {
+else if (firstName == "C") {
 	Superhero_Name_1 = "Spider";
 }
-else if (Firstname == "D") {
+else if (firstName == "D") {
 	Superhero_Name_1 = "Elephant";
 }
-else if (Firstname == "E") {
+else if (firstName == "E") {
 	Superhero_Name_1 = "Dino";
 }
-else if (Firstname == "F") {
+else if (firstName == "F") {
 	Superhero_Name_1 = "Fire";
 }
-else if (Firstname == "G") {
+else if (firstName == "G") {
 	Superhero_Name_1 = "Giant";
 }
-else if (Firstname == "H") {
+else if (firstName == "H") {
 	Superhero_Name_1 = "Amazing";
 }
-else if (Firstname == "I") {
+else if (firstName == "I") {
 	Superhero_Name_1 = "Invisible";
 }
-else if (Firstname == "J") {
+else if (firstName == "J") {
 	Superhero_Name_1 = "Aqua";
 }
-else if (Firstname == "K") {
+else if (firstName == "K") {
 	Superhero_Name_1 = "Wolf";
 }
-else if (Firstname == "L") {
+else if (firstName == "L") {
 	Superhero_Name_1 = "Ant";
 }
-else if (Firstname == "M") {
+else if (firstName == "M") {
 	Superhero_Name_1 = "Mighty";
 }
-else if (Firstname == "N") {
+else if (firstName == "N") {
 	Superhero_Name_1 = "Bobcat";
 }
-else if (Firstname == "O") {
+else if (firstName == "O") {
 	Superhero_Name_1 = "Wild";
 }
-else if (Firstname == "P") {
+else if (firstName == "P") {
 	Superhero_Name_1 = "Snake";
 }
-else if (Firstname == "Q") {
+else if (firstName == "Q") {
 	Superhero_Name_1 = "Silver";
 }
-else if (Firstname == "R") {
+else if (firstName == "R") {
 	Superhero_Name_1 = "Gold";
 }
-else if (Firstname == "S") {
+else if (firstName == "S") {
 	Superhero_Name_1 = "Star";
 }
-else if (Firstname == "T") {
+else if (firstName == "T") {
 	Superhero_Name_1 = "The";
 }
-else if (Firstname == "U") {
+else if (firstName == "U") {
 	Superhero_Name_1 = "Ultra";
 }
-else if (Firstname == "V") {
+else if (firstName == "V") {
 	Superhero_Name_1 = "Incredible";
 }
-else if (Firstname == "W") {
+else if (firstName == "W") {
 	Superhero_Name_1 = "Wonder";
 }
-else if (Firstname == "X") {
+else if (firstName == "X") {
 	Superhero_Name_1 = "Great";
 }
-else if (Firstname == "Y") {
+else if (firstName == "Y") {
 	Superhero_Name_1 = "Doctor";
 }
-else if (Firstname == "Z") {
+else if (firstName == "Z") {
 	Superhero_Name_1 = "Magical";
 }
 else {
+	// the default first half of the super hero name
 	Superhero_Name_1 = "SUPER";
 }
 
-// LASTNAME
-
-if (Lastname == "A") {
+// getting the second half of the super hero name
+if (lastName == "A") {
 	Superhero_Name_2 = "Witch";
 }
-else if (Lastname == "B") {
+else if (lastName == "B") {
 	Superhero_Name_2 = "Wizard";
 }
-else if (Lastname == "C") {
+else if (lastName == "C") {
 	Superhero_Name_2 = "Vampire";
 }
-else if (Lastname == "D") {
+else if (lastName == "D") {
 	Superhero_Name_2 = "Zombie";
 }
-else if (Lastname == "E") {
+else if (lastName == "E") {
 	Superhero_Name_2 = "Phoenix";
 }
-else if (Lastname == "F") {
+else if (lastName == "F") {
 	Superhero_Name_2 = "Defender";
 }
-else if (Lastname == "G") {
+else if (lastName == "G") {
 	Superhero_Name_2 = "Hero";
 }
-else if (Lastname == "H") {
+else if (lastName == "H") {
 	Superhero_Name_2 = "Tiger";
 }
-else if (Lastname == "I") {
+else if (lastName == "I") {
 	Superhero_Name_2 = "Cat";
 }
-else if (Lastname == "J") {
+else if (lastName == "J") {
 	Superhero_Name_2 = "Fire";
 }
-else if (Lastname == "K") {
+else if (lastName == "K") {
 	Superhero_Name_2 = "Fist";
 }
-else if (Lastname == "L") {
+else if (lastName == "L") {
 	Superhero_Name_2 = "Leg";
 }
-else if (Lastname == "M") {
+else if (lastName == "M") {
 	Superhero_Name_2 = "Water";
 }
-else if (Lastname == "N") {
+else if (lastName == "N") {
 	Superhero_Name_2 = "Earth";
 }
-else if (Lastname == "O") {
+else if (lastName == "O") {
 	Superhero_Name_2 = "Stone";
 }
-else if (Lastname == "P") {
+else if (lastName == "P") {
 	Superhero_Name_2 = "Air";
 }
-else if (Lastname == "Q") {
+else if (lastName == "Q") {
 	Superhero_Name_2 = "Lighting";
 }
-else if (Lastname == "R") {
+else if (lastName == "R") {
 	Superhero_Name_2 = "Titan";
 }
-else if (Lastname == "S") {
+else if (lastName == "S") {
 	Superhero_Name_2 = "Sword";
 }
-else if (Lastname == "T") {
+else if (lastName == "T") {
 	Superhero_Name_2 = "Arrow";
 }
-else if (Lastname == "U") {
+else if (lastName == "U") {
 	Superhero_Name_2 = "Bow";
 }
-else if (Lastname == "V") {
+else if (lastName == "V") {
 	Superhero_Name_2 = "Protector";
 }
-else if (Lastname == "W") {
+else if (lastName == "W") {
 	Superhero_Name_2 = "Owl";
 }
-else if (Lastname == "X") {
+else if (lastName == "X") {
 	Superhero_Name_2 = "Shield";
 }
-else if (Lastname == "Y") {
+else if (lastName == "Y") {
 	Superhero_Name_2 = "Axe";
 }
-else if (Lastname == "Z") {
+else if (lastName == "Z") {
 	Superhero_Name_2 = "Blade";
 }
 else {
+	// the default second half of the super hero name
 	Superhero_Name_2 = "SUPER";
 }
 
+// getting the super power
 if (Month == "1") {
-	Power = "infinte money to make a fancy super suit like Ironman or Batman";
+	Power = "infinite money to make a fancy super suit like Ironman or Batman";
 }
 else if (Month == "2") {
 	Power = "the ability to talk to fish and breath underwater";
@@ -334,10 +226,11 @@ else if (Month == "12") {
 	Power = "the ability to phase thru walls";
 }
 else {
+	// the default power
 	Power = "Super Strength";
 }
 
-
+// Output out the results
 console.log(`Congrats!!! Your superhero name is: ${Superhero_Name_1} ${Superhero_Name_2} and your power is: ${Power}!`)
 
 
