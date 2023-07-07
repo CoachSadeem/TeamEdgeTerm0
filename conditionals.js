@@ -17,6 +17,17 @@ console.log("------------------- Challenge 1 -------------------")
     Write conditional statements that print out whether you can drive in your city. */
 
 
+let age = READLINE.question("what is your age: ");
+
+// console.log(typeof(age));
+
+if (age >= 16){
+    console.log(`Can Drive`);
+}
+else{
+    console.log(`Can't Drive`);
+}
+
 
 
 
@@ -37,7 +48,19 @@ console.log("------------------- Challenge 2 -------------------")
     Hint: Create three variables and assign them random scores. */
 
 
+let a = READLINE.question("number 1: ");
+let b = READLINE.question("number 2: ");
+let c = READLINE.question("number 3: ");
 
+if (a >= b && a >= c){
+    console.log(`${a} is the biggest number!`);
+}
+else if (b >= c){
+    console.log(`${b} is the biggest number!`);
+}
+else{
+    console.log(`${c} is the biggest number!`);
+}
 
 
 
@@ -66,7 +89,18 @@ console.log("------------------- Challenge 3 -------------------")
 let weather = `rainy`;
 
 
-
+if (weather = `rainy`){
+    console.log(`Bring an umbrella`);
+}
+else if (weather = `sunny`){
+    console.log(`Wear a hat and sunglasses`);
+}
+else if (weather = `snowing`){
+    console.log(`Wear gloves and a scarf`);
+}
+else{
+    console.log(`Wear whatever you want!`);
+}
 
 
 
@@ -122,7 +156,7 @@ console.log("------------------- Challenge 4 -------------------")
 
 /* -------------------------------------------- */
 
-console.log("------------------- Challenge 1 -------------------")
+console.log("------------------- Challenge 5 -------------------")
 
 /* A leap year is a calendar year that contains an additional day added 
     to keep the calendar year synchronized with the astronomical year or seasonal year.
@@ -139,7 +173,24 @@ console.log("------------------- Challenge 1 -------------------")
   year stored in a variable is/was a leap year.*/
 
 
+let year = Number(READLINE.question("Enter the year: "));
 
+if (year % 4 == 0){
+    if(year % 100 == 0){
+        if(year % 400 == 0){
+            console.log(`${year} is not a leap year!`)
+        }
+        else{
+            console.log(`${year} is a leap year!`)
+        }
+    }
+    else{
+        console.log(`${year} is a leap year!`)
+    }
+}
+else{
+    console.log(`${year} is not a leap year!`)
+}
 
 
 

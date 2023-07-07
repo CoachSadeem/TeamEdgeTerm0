@@ -1,0 +1,15 @@
+{
+  "name": "teamedgeterm0",
+  "version": "1.0.0",
+  "description": "Javascript challenges for Google's Code Next Team Edge Program. These challenges are defined in the **master** branch, and solved in the **solutions** branch of this repo: https://github.com/CodeNextAdmin/TeamEdgeTerm0/tree/solutions",
+  "main": "ConditionalGame.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}

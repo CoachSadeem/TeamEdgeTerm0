@@ -51,7 +51,7 @@ let animals = []
 console.log("------------------- CHALLENGE 3 : DEBUG -------------------------")
 
 //-->TODO: fix this code so it no longer logs the last item as undefined...
-for(let i = 0 ; i<= colors.length; i ++) {
+for(let i = 0 ; i< colors.length; i ++) {
 
     console.log("The color is: " + colors[i])
 }
@@ -59,7 +59,7 @@ for(let i = 0 ; i<= colors.length; i ++) {
 //-->TODO: fix this code! What could be wrong? It should print out the 5 times tables all the way to 12.
 
 console.log("Behold...the 5 times table: ")
-for(let i = 0 ; i > 12;  i++) {
+for(let i = 0 ; i <= 12;  i++) {
 
     console.log(` 5 x ${i} =  ` + i*5 )
      
@@ -71,7 +71,7 @@ function logArray(array){
 
     for(let i = 0 ; i<array.length ; i++){
 
-        console.log(i)
+        console.log(array[i])
     }
 }
 

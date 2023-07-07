@@ -8,18 +8,20 @@ console.log(`Let's play Rock Paper Scissors!`);
 
 while(true){
 	let userInput = READLINE.question(`Do you want to play rock, paper, or scissors? `).toLowerCase();
-	randomSelection = Math.floor(Math.random()*3);
-  computerSelection = options[randomSelection];
-
-	console.log("You played: ${userInput} and the computer played: ${computerSelection}");
+	let randomSelection = Math.floor(Math.random()*3); // missing a let
+  let computerSelection = options[randomSelection];
+  
+	console.log(`You played: ${userInput} and the computer played: ${computerSelection}`);// needs to be `
   if(userInput === computerSelection){
     console.log("It's a tie!");
   }
-  else if((userInput = "rock" && computerSelection = "paper") ||
-          (userInput = "paper" && computerSelection = "scissors") ||
-          (userInput = "scissors" && computerSelection = "rock")){
+  else if((userInput === "rock" && computerSelection === "paper") ||
+          (userInput === "paper" && computerSelection === "scissors") ||
+          (userInput === "scissors" && computerSelection === "rock"))
+          { // needed === for compairing 
     console.log("You Lose!");
   }
-  else if{
+  else{// should just be else
     console.log("You Win!");
   }
+} // need ending } for while

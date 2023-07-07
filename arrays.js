@@ -27,30 +27,30 @@ Challenge 1: Introduction to Arrays
  console.log("------------------- Challenge 1 -------------------")
 
 // Example: Declaring an array of values and printing it out.
-let emptyArray = [] //This is an empty JavaScript Array
-let names = ["Sam", "Wolf", "Alex", "Bella", "Shaquan"]
-console.log("names: " + names)  
+let emptyArray = []; //This is an empty JavaScript Array
+let names = ["Sam", "Wolf", "Alex", "Bella", "Shaquan"];
+console.log("names: " + names);
 
 
 // **** Challenge 1 : Part 1 **** 
 // Given an array named food, fill the array with 5 strings.
 
-let food = []
-console.log("food: " + food)  
+let food = ["Hamburger", "Sushi", "Ice Cream", "Pasta", "Taco"];
+console.log("food: " + food);
 
 
 // **** Challenge 1 : Part 2 **** 
 // Declare an array named numbers with 5 numbers.
 
-
-console.log("numbers: " + numbers)   
+let numbers = [2,6,9,4,1];
+console.log("numbers: " + numbers);
 
 
 // **** Challenge 1 : Part 3 **** 
 // Declare and log two more arrays with anything you want. 
 
-
-
+let fancyArray = ["Hi", "This", "Is", "An", "Array"];
+console.log("Fancy Array: " + fancyArray);
 
 
 /* -------------------------------------------- 
