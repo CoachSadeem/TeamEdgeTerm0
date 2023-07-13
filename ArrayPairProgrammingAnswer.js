@@ -170,7 +170,7 @@ console.log(hiddenArray[secretWordIndex]);
 
 
 // ************** Challenge 4: Number Array **************
-// create an array of a random size filled with random letters
+// the createArray function creates an array of a random size filled with random letters
 // What is the length of letterArray
 // hint do not print it and count it out yourself
 let letterArray = createArray();

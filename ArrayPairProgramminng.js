@@ -174,7 +174,7 @@ let secretWord3 = "Minecraft";
 
 
 // ************** Challenge 4: Letter Array **************
-// create an array of a random size filled with random letters
+// the createArray function creates an array of a random size filled with random letters
 // What is the length of letterArray
 // hint feel free to print the array but don't count it out yourself, let the computer do the hard work
 let letterArray = createArray();

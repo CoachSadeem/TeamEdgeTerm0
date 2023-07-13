@@ -117,24 +117,29 @@ console.log(SadeemsFavFoods.toString());
 // I want you to only print out the airport closest to you
 // hint look up indexing arrays
 let airports = ["JFK", "DTW", "LAX", "ATL", "PHX"];
-
+console.log(airports[1])
 
 // now lets add SEA for settle to the end of our array
 // then print it out
 // hint look up push
 
+console.log(airports.push("SEA"));
+console.log(airports);
 
 
 // Now replace LAX with LAS for Las Vegas
 // then print it out
 // hint indexing
-
+airports[2] = "LAS";
+console.log(airports)
 
 
 // You know what I'm tired of the last item in the list, lets remove it
 // then print it out
 // hint pop
-
+//airports.pop();
+console.log(airports.pop());
+console.log(airports)
 
 
 
@@ -157,17 +162,20 @@ let secretWord1 = "Mortal Kombat";
 let secretWord2 = "Mario Kart";
 let secretWord3 = "Minecraft";
 
+console.log(hiddenArray.includes(secretWord1));
+console.log(hiddenArray.includes(secretWord2));
+console.log(hiddenArray.includes(secretWord3));
 
 
 // Now that you found the secret word
 // lets find the index of it in the hiddenArray
 // hint look up index of
 
-
+console.log(hiddenArray.indexOf("Minecraft"));
 
 // Lastly print out the secret word from the array using the index
 
-
+console.log(hiddenArray[7]);
 
 
 
@@ -181,12 +189,15 @@ let secretWord3 = "Minecraft";
 // What is the length of letterArray
 // hint feel free to print the array but don't count it out yourself, let the computer do the hard work
 let letterArray = createArray();
-
+console.log(letterArray)
+let arrayLength = letterArray.length
+console.log(arrayLength)
 
 
 // Now that you know the length 
 // can we print out the last letter in the array
-
+console.log(letterArray.length -1);
+console.log(letterArray[letterArray.length - 1])
 
 
 
