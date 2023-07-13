@@ -97,16 +97,19 @@ const createArray = () => {
 // ************** Challenge 1: Creating Arrays **************
 // Create a blank array called myFavFoods
 // Create another array called SadeemsFavFoods and initialize it with sushi, italian sandwich and chocolate
-
-
+let myFavFoods = [];
+let SadeemsFavFoods = ["Sushi", "italian sandwich", "chocolate"];
 
 // Now print out both arrays using console.log
 
-
+console.log(myFavFoods);
+console.log(SadeemsFavFoods);
 
 // You see how it prints out similar to how you wrote it
 // How can you print an array like a string
 
+console.log(myFavFoods.toString());
+console.log(SadeemsFavFoods.toString());
 
 
 // ************** Challenge 2: Accessing Arrays **************
