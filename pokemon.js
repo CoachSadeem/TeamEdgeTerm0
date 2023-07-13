@@ -24,6 +24,7 @@ class Room {
         this.paths = paths;
         this.pokemon = pokemon;
         this.firstVisit = false;
+        this.enter
     }
 }
 

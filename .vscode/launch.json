@@ -7,9 +7,24 @@
         {
         "type": "node",
         "request": "launch",
-        "name": "Launch Program",
-        "skipFiles": ["<node_internals>/**"],
-        "program": "${workspaceFolder}\/pokemon.js"
-        }
+        "name": "Best Launch Program ",
+        "skipFiles": [
+            "${workspaceFolder}/node_modules/**/*.js",
+            "${workspaceFolder}/lib/**/*.js"
+        ],
+        "program": "${file}",
+        "console": "integratedTerminal",
+        "sourceMaps": true,
+        "cwd": "${workspaceRoot}",
+        "localRoot": "${workspaceFolder}/server",
+        "outFiles": ["${workspaceFolder}/out/**/*.js"],
+        "smartStep": true,
+        "sourceMapPathOverrides": {
+            "/__parcel_source_root/*": "${webRoot}/*"
+          },
+        
+        },
+        
     ]
+    
 }

@@ -10,8 +10,8 @@
 	that will make this your new go-to calculator!
 
   -------------------------------------------- */
-  const READLINE = require("readline-sync");
-  console.log(`My Simple Calculator`);
+const READLINE = require("readline-sync");
+console.log(`My Simple Calculator`);
 
 /* -------------------------------------------- 
 
@@ -30,7 +30,7 @@ Part 1:
 // Write a function called addNumbers that will take two numbers and return the sum.
 
 
-function addNumbers(num1, num2){
+function addNumbers(num1, num2) {
 	return num1 + num2;
 }
 
@@ -38,7 +38,7 @@ function addNumbers(num1, num2){
 
 
 // Write a function called subNumbers that will take two numbers and return the difference.
-function subNumbers(num1, num2){
+function subNumbers(num1, num2) {
 	return num1 - num2;
 }
 
@@ -72,7 +72,7 @@ Part 2:
 
 // Write a function called multiplyNumbers that will take two numbers and return the product.
 
-function multiplyNumbers(num1, num2){
+function multiplyNumbers(num1, num2) {
 	return num1 * num2;
 }
 
@@ -80,7 +80,7 @@ function multiplyNumbers(num1, num2){
 
 // Write a function called divideNumbers that will take two numbers and return the quotent.
 
-function divideNumbers(num1, num2){
+function divideNumbers(num1, num2) {
 	return num1 / num2;
 }
 
@@ -108,19 +108,19 @@ Write a function that will prompt the user for the operation they want to call a
 
   -------------------------------------------- */
 
-function getUserInput(){
+function getUserInput() {
 	let operation = READLINE.question("Which operation do you want? 1 is +, 2 is -, 3 is *, 4 is / ");
 	let num1 = Number(READLINE.question("What is the first number? "));
 	let num2 = Number(READLINE.question("What is the second number? "));
 	let answer = "";
-	if(operation == 1){
-		answer = addNumbers(num1,num2);
-	}else if (operation == 2){
-		answer = subNumbers(num1,num2);
-	}else if (operation == 3){
-		answer = multiplyNumbers(num1,num2);
-	}else if (operation == 4){
-		answer = divideNumbers(num1,num2);
+	if (operation == 1) {
+		answer = addNumbers(num1, num2);
+	} else if (operation == 2) {
+		answer = subNumbers(num1, num2);
+	} else if (operation == 3) {
+		answer = multiplyNumbers(num1, num2);
+	} else if (operation == 4) {
+		answer = divideNumbers(num1, num2);
 	}
 
 	console.log(`The answer is ${answer}`);
@@ -128,7 +128,7 @@ function getUserInput(){
 
 
 
-getUserInput()
+getUserInput();
 
 
 
@@ -166,7 +166,7 @@ Don't forget to:
 
 
 
-function steps(Miles, StepsPerYard){
+function steps(Miles, StepsPerYard) {
 	let Yards = Miles * 1760; // convert miles to yards
 	let steps = StepsPerYard * Yards; // gets how many steps I took
 	return steps;
@@ -193,11 +193,11 @@ checkAnswers(steps(1, 2), 3520);
 /* -------------------------------------------- */
 // Ignore this section. This is just for checking your work
 
-function checkAnswers(genAnswer, correctAnswer){
-	if(genAnswer == correctAnswer){
-		console.log(`Your code works!`)
+function checkAnswers(genAnswer, correctAnswer) {
+	if (genAnswer == correctAnswer) {
+		console.log(`Your code works!`);
 	}
-	else{
+	else {
 		console.log(`Try again, your code generated ${genAnswer} but the correct answer is ${correctAnswer}`);
 	}
 }

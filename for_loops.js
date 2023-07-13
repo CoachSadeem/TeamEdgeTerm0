@@ -8,7 +8,7 @@
  *   2. ITERATOR: Write a for for loop that logs every item in an array
  *   3. DEBUG: Fix a for loop that has an error (out-of-bounds)
  *   4. EVEN COUNTDOWN: Write a for loop that counts down from 100 to 0, 
- *      logging only the odd numers
+ *      logging only the odd numbers
  *   5. FINDER: Write a function that takes in an array and a word and prints 
  *      CONGRATULATIONS!! if the word is found in the array
  *   6. NESTED: Write a function that logs every letter in a sentence

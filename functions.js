@@ -31,7 +31,7 @@ function printMessage() {
 // **** Challenge 1: Problem 2 ****
 // Write a function called printFiveMessages() that calls printMessage() five times.
 
-function printFiveMessages() {
+const printFiveMessages = () => {
 
 	printMessage();
 	printMessage();
