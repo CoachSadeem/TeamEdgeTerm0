@@ -78,7 +78,7 @@ function multiplyNumbers(num1, num2) {
 
 
 
-// Write a function called divideNumbers that will take two numbers and return the quotent.
+// Write a function called divideNumbers that will take two numbers and return the quotient.
 
 function divideNumbers(num1, num2) {
 	return num1 / num2;

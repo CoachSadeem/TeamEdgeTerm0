@@ -38,7 +38,7 @@ console.log(welcomeMessage)
 
 while(active){
 
-    checkAnswer(promptUser()) //this makes the program continously prompt and check response while the boolean 'active' returns true
+    checkAnswer(promptUser()) //this makes the program continuously prompt and check response while the boolean 'active' returns true
 
 }
 

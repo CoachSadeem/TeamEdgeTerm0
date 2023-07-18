@@ -50,7 +50,7 @@ console.log("------------------- CHALLENGE 2 : FOUND   -------------------")
 let items = ["pencil" , "eraser" , "mirror" , "comb" , "spoon" , "key" , "earrings" ,"cat food" , "magazine"]
 
 //-->TODO: Use a while loop to search the contents of an array for the key! If it exists, print "found the key!"
-
+while 
 
 
 

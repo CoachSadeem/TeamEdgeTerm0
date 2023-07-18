@@ -235,5 +235,3 @@ console.log(`Congrats!!! Your superhero name is: ${Superhero_Name_1} ${Superhero
 
 
 
-
-
