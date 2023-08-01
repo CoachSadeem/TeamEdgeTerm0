@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello, world!</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+    <link rel="icon" href="favicon.png">
+    <script src="interactive.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+</head>
+
+<body>
+    <h1>Web Dev Jeopardy!!!</h1>
+    <div class="parent">
+
+        <div class="div1"> <p>Arsty</p> </div>
+        <div class="div2"> <p>Label 1</p> </div>
+        <div class="div3"> <p>Label 2</p> </div>
+        <div class="div4"> <p>Label 3</p> </div>
+        <div class="div5"> <p>Label 4</p> </div>
+
+        <div class="div6" id="cell00" onclick="showQuestion(0,0)">
+            <p>100</p>
+        </div>
+        <div class="div7" id="cell01" onclick="showQuestion(0,1)">
+            <p>100</p>
+
+        </div>
+        <div class="div8" id="cell02" onclick="showQuestion(0,2)">
+            <p>100</p>
+
+        </div>
+        <div class="div9" id="cell03" onclick="showQuestion(0,3)">
+            <p>100</p>
+
+        </div>
+        <div class="div10" id="cell04" onclick="showQuestion(0,4)">
+            <p>100</p>
+
+        </div>
+        <div class="div11" id="cell10" onclick="showQuestion(1,0)">
+            <p>200</p>
+
+        </div>
+        <div class="div12" id="cell11" onclick="showQuestion(1,1)">
+            <p>200</p>
+
+        </div>
+        <div class="div13" id="cell12" onclick="showQuestion(1,2)">
+            <p>200</p>
+
+        </div>
+        <div class="div14" id="cell13" onclick="showQuestion(1,3)">
+            <p>200</p>
+
+        </div>
+        <div class="div15" id="cell14" onclick="showQuestion(1,4)">
+            <p>200</p>
+
+        </div>
+        <div class="div16" id="cell20" onclick="showQuestion(2,0)">
+            <p>300</p>
+
+        </div>
+        <div class="div17" id="cell21" onclick="showQuestion(2,1)">
+            <p>300</p>
+
+        </div>
+        <div class="div18" id="cell22" onclick="showQuestion(2,2)">
+            <p>300</p>
+
+        </div>
+        <div class="div19" id="cell23" onclick="showQuestion(2,3)">
+            <p>300</p>
+
+        </div>
+        <div class="div20" id="cell24" onclick="showQuestion(2,4)">
+            <p>300</p>
+
+        </div>
+        <div class="div21" id="cell30" onclick="showQuestion(3,0)">
+            <p>400</p>
+
+        </div>
+        <div class="div22" id="cell31" onclick="showQuestion(3,1)">
+            <p>400</p>
+
+        </div>
+        <div class="div23" id="cell32" onclick="showQuestion(3,2)">
+            <p>400</p>
+
+        </div>
+        <div class="div24" id="cell33" onclick="showQuestion(3,3)">
+            <p>400</p>
+
+        </div>
+        <div class="div25" id="cell34" onclick="showQuestion(3,4)">
+            <p>400</p>
+
+        </div>
+        <div class="div26" id="cell40" onclick="showQuestion(4,0)">
+            <p>500</p>
+
+        </div>
+        <div class="div27" id="cell41" onclick="showQuestion(4,1)">
+            <p>500</p>
+
+        </div>
+        <div class="div28" id="cell42" onclick="showQuestion(4,2)">
+            <p>500</p>
+
+        </div>
+        <div class="div29" id="cell43" onclick="showQuestion(4,3)">
+            <p>500</p>
+
+        </div>
+        <div class="div30" id="cell44" onclick="showQuestion(4,4)">
+            <p>500</p>
+
+        </div>
+    </div>
+
+
+    <div class="playArea">
+        <div class="question"><p id="question">Q: </p> </div>
+        <div class="answer"><p id="answer">A: </p> </div>
+        <div class="show">         <button onclick="showAnswer()">Show Answer:</button></div>
+    </div>
+
+    <div class="scoreboard">
+        <div class="score1">
+            <p role="textbox" contenteditable="true">Team 1</p>
+        </div>
+        <div class="score2">
+            <p role="textbox" contenteditable="true">Team 2</p>
+        </div>
+        <div class="score3">
+            <p role="textbox" contenteditable="true">Team 3</p>
+        </div>
+        <div class="score4">
+            <p id="t1score" role="textbox" contenteditable="true">0</p>
+        </div>
+        <div class="score5">
+            <p id="t2score" role="textbox" contenteditable="true">0</p>
+        </div>
+        <div class="score6">
+            <p id="t3score" role="textbox" contenteditable="true">0</p>
+        </div>
+        <div class="score7">
+            <p><button onclick="addPoints(1)">+</button></p>
+        </div>
+        <div class="score8">
+            <p><button onclick="addPoints(2)">+</button> </p>
+        </div>
+        <div class="score9">
+            <p><button onclick="addPoints(3)">+</button> </p>
+        </div>
+        <div class="score10">
+            <p><button onclick="subPoints(1)">-</button> </p>
+        </div>
+        <div class="score11">
+            <p><button onclick="subPoints(2)">-</button> </p>
+        </div>
+        <div class="score12">
+            <p><button onclick="subPoints(3)">-</button> </p>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<!-- 
+
+<table border="1" cellspacing="0" cellpadding="1">
+    <tr>
+        <td></td>
+        <td>
+           
+        </td>
+        <td>
+            <p>Label 2</p>
+        </td>
+        <td>
+            <p>Label 3</p>
+        </td>
+        <td>
+            <p>Label 4</p>
+        </td>
+    </tr>
+    <tr>
+        <td><button class="cell" id="cell00" onclick="showQuestion(0,0)">100</button></td>
+        <td><button class="cell" id="cell01" onclick="showQuestion(0,1)">100</button></td>
+        <td><button class="cell" id="cell02" onclick="showQuestion(0,2)">100</button></td>
+        <td><button class="cell" id="cell03" onclick="showQuestion(0,3)">100</button></td>
+        <td><button class="cell" id="cell04" onclick="showQuestion(0,4)">100</button></td>
+    </tr>
+    <tr>
+        <td><button class="cell" id="cell10" onclick="showQuestion(1,0)">200</button></td>
+        <td><button class="cell" id="cell11" onclick="showQuestion(1,1)">200</button></td>
+        <td><button class="cell" id="cell12" onclick="showQuestion(1,2)">200</button></td>
+        <td><button class="cell" id="cell13" onclick="showQuestion(1,3)">200</button></td>
+        <td><button class="cell" id="cell14" onclick="showQuestion(1,4)">200</button></td>
+    </tr>
+    <tr>
+        <td><button class="cell" id="cell20" onclick="showQuestion(2,0)">300</button></td>
+        <td><button class="cell" id="cell21" onclick="showQuestion(2,1)">300</button></td>
+        <td><button class="cell" id="cell22" onclick="showQuestion(2,2)">300</button></td>
+        <td><button class="cell" id="cell23" onclick="showQuestion(2,3)">300</button></td>
+        <td><button class="cell" id="cell24" onclick="showQuestion(2,4)">300</button></td>
+    </tr>
+    <tr>
+        <td><button class="cell" id="cell30" onclick="showQuestion(3,0)">400</button></td>
+        <td><button class="cell" id="cell31" onclick="showQuestion(3,1)">400</button></td>
+        <td><button class="cell" id="cell32" onclick="showQuestion(3,2)">400</button></td>
+        <td><button class="cell" id="cell33" onclick="showQuestion(3,3)">400</button></td>
+        <td><button class="cell" id="cell34" onclick="showQuestion(3,4)">400</button></td>
+    </tr>
+    <tr>
+        <td><button class="cell" id="cell40" onclick="showQuestion(4,0)">500</button></td>
+        <td><button class="cell" id="cell41" onclick="showQuestion(4,1)">500</button></td>
+        <td><button class="cell" id="cell42" onclick="showQuestion(4,2)">500</button></td>
+        <td><button class="cell" id="cell43" onclick="showQuestion(4,3)">500</button></td>
+        <td><button class="cell" id="cell44" onclick="showQuestion(4,4)">500</button></td>
+    </tr>
+</table> -->
+
+<!-- <table border="1" cellspacing="0" cellpadding="1">
+    <tr>
+        <td><p>Row 0, Column 1</p></td>
+        <td><p>Row 0, Column 2</p></td>
+        <td><p>Row 0, Column 3</p></td>
+        <td><p>Row 0, Column 4</p></td>
+        <td><p>Row 0, Column 5</p></td>
+    </tr>
+    <tr>
+        <td><button> Row 1, Column 1 </button></td>
+        <td><button> Row 1, Column 2 </button></td>
+        <td><button> Row 1, Column 3 </button></td>
+        <td><button> Row 1, Column 4 </button></td>
+        <td><button> Row 1, Column 5 </button></td>
+    </tr>
+    <tr>
+        <td><button> Row 2, Column 1 </button></td>
+        <td><button> Row 2, Column 2 </button></td>
+        <td><button> Row 2, Column 3 </button></td>
+        <td><button> Row 2, Column 4 </button></td>
+        <td><button> Row 2, Column 5 </button></td>
+    </tr>
+    <tr>
+        <td><button> Row 3, Column 1 </button></td>
+        <td><button> Row 3, Column 2 </button></td>
+        <td><button> Row 3, Column 3 </button></td>
+        <td><button> Row 3, Column 4 </button></td>
+        <td><button> Row 3, Column 5 </button></td>
+    </tr>
+    <tr>
+        <td><button> Row 4, Column 1 </button></td>
+        <td><button> Row 4, Column 2 </button></td>
+        <td><button> Row 4, Column 3 </button></td>
+        <td><button> Row 4, Column 4 </button></td>
+        <td><button> Row 4, Column 5 </button></td>
+    </tr>
+    <tr>
+        <td><button> Row 5, Column 1 </button></td>
+        <td><button> Row 5, Column 2 </button></td>
+        <td><button> Row 5, Column 3 </button></td>
+        <td><button> Row 5, Column 4 </button></td>
+        <td><button> Row 5, Column 5 </button></td>
+    </tr>
+</table> -->
