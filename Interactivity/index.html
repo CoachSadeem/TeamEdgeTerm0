@@ -6,7 +6,6 @@
     <title>Hello, world!</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="" />
-    <link rel="icon" href="favicon.png">
     <script src="interactive.js"></script>
     <link rel="stylesheet" type="text/css" href="index.css" />
 </head>
@@ -15,7 +14,7 @@
     <h1>Web Dev Jeopardy!!!</h1>
     <div class="parent">
 
-        <div class="div1"> <p>Arsty</p> </div>
+        <div class="div1"> <p>Artsy</p> </div>
         <div class="div2"> <p>Label 1</p> </div>
         <div class="div3"> <p>Label 2</p> </div>
         <div class="div4"> <p>Label 3</p> </div>
@@ -131,13 +130,13 @@
 
     <div class="scoreboard">
         <div class="score1">
-            <p role="textbox" contenteditable="true">Team 1</p>
+            <p id="team1" role="textbox" contenteditable="true">Team 1</p>
         </div>
         <div class="score2">
-            <p role="textbox" contenteditable="true">Team 2</p>
+            <p id="team2" role="textbox" contenteditable="true">Team 2</p>
         </div>
         <div class="score3">
-            <p role="textbox" contenteditable="true">Team 3</p>
+            <p id="team3" role="textbox" contenteditable="true">Team 3</p>
         </div>
         <div class="score4">
             <p id="t1score" role="textbox" contenteditable="true">0</p>
@@ -167,7 +166,7 @@
             <p><button onclick="subPoints(3)">-</button> </p>
         </div>
     </div>
-
+    <p><button onclick="reset()">reset</button></p>
 </body>
 
 </html>

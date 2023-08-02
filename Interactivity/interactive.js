@@ -1,9 +1,6 @@
-const changeText = () => {
-    document.querySelector("#text").innerHTML = "Bye!";
-    document.querySelector("#text").style.color = "#6495ED";
-};
 
 //#region Jeopardy Questions
+// The class for my questions made up of an answer, a question and the points
 class JeopardyQuestion {
     constructor(question, answer, points) {
         this.question = question;
@@ -11,7 +8,8 @@ class JeopardyQuestion {
         this.points = points;
     }
 }
-
+// each question is made the same way
+// the lables are done so it is a 2D grid starting at 00 and ending at 44
 J00 = new JeopardyQuestion();
 J00.question = `<br>
 const question5 = () => {<br>
@@ -149,48 +147,148 @@ J44.question = "Question 4,4";
 J44.answer = "Answer 4,4";
 J44.points = 500;
 
-let JeopardyQuestions = [[J00,J01,J02,J03,J04],[J10,J11,J12,J13,J14],[J20,J21,J22,J23,J24],[J30,J31,J32,J33,J34],[J40,J41,J42,J43,J44]];
+// 2d array of all the questions
+let JeopardyQuestions = [[J00, J01, J02, J03, J04], [J10, J11, J12, J13, J14], [J20, J21, J22, J23, J24], [J30, J31, J32, J33, J34], [J40, J41, J42, J43, J44]];
 //#endregion
 
-const showGrid = () => {
-    JeopardyQuestions.forEach(questions => {
-        questions.forEach(question => {
-            console.log(question)
-        });
-    });
+// Current row and column track what ever question we are currently on
+let currentRow = -1;
+let currentColumn = -1;
+// Formatting the questions and the answers
+const QuestionStart = "Q: ";
+const AnswerStart = "A: ";
 
-    for(let i = 0; i < JeopardyQuestions.length; i++){
-        for(let j = 0; j < JeopardyQuestions[i].length; j++){
-            console.log(`index: (${i},${j}) | ${JeopardyQuestions[i][j].question}`)
-        }
-    }
+// the reset button
+const reset = () => {
+    // resetting the color of the questions
+    // Check if we already have an array in local storage.
+    let questionsAsked = localStorage.getItem("QA");
+    // If not, create the array.
+    questionsAsked = [];
+    // Encode the array.
+    questionsAsked = JSON.stringify(questionsAsked);
+    // Add back to LocalStorage. 
+    localStorage.setItem("QA", questionsAsked);
+    location.reload();
+
+    // resetting the scores to 0
+    document.querySelector(`#t1score`).innerHTML = 0;
+    localStorage.setItem(`dataStorage-t1score`,document.querySelector(`#t1score`).innerHTML);
+    document.querySelector(`#t2score`).innerHTML = 0;
+    localStorage.setItem(`dataStorage-t2score`,document.querySelector(`#t2score`).innerHTML);
+    document.querySelector(`#t3score`).innerHTML = 0;
+    localStorage.setItem(`dataStorage-t3score`,document.querySelector(`#t3score`).innerHTML);
+
+    // resetting the team names
+    document.querySelector(`#team1`).innerHTML = "Team 1";
+    localStorage.setItem(`dataStorage-team1`,document.querySelector(`#team1`).innerHTML);
+    document.querySelector(`#team2`).innerHTML = "Team 2";
+    localStorage.setItem(`dataStorage-team2`,document.querySelector(`#team2`).innerHTML);
+    document.querySelector(`#team3`).innerHTML = "Team 3";
+    localStorage.setItem(`dataStorage-team3`,document.querySelector(`#team3`).innerHTML);
+    
 };
 
-let previousRow = -1;
-let previousColumn = -1;
-let QuestionStart = "Q: ";
-let AnswerStart = "A: ";
-
+// show a question
 const showQuestion = (row, column) => {
-    previousRow = row;
-    previousColumn = column;
+    currentRow = row;
+    currentColumn = column;
+    // updates Q: to be the question
+    // changes the color of the button
+    // clears the previous answer
     document.querySelector("#question").innerHTML = QuestionStart + JeopardyQuestions[row][column].question;
     document.querySelector(`#cell${row}${column}`).style.color = "#545353";
     document.querySelector("#answer").innerHTML = AnswerStart;
 
-}
+    // saves the id in a local storage array so I can save which questions have been asked
+    // Check if we already have an array in local storage.
+    let questionsAsked = localStorage.getItem("QA");
+    // If not, create the array.
+    if (questionsAsked === null) questionsAsked = [];
+    // If so, decode the array. 
+    else questionsAsked = JSON.parse(questionsAsked);
+    // Add our new item. 
+    questionsAsked.push(`#cell${row}${column}`);
+    // Encode the array.
+    questionsAsked = JSON.stringify(questionsAsked);
+    // Add back to LocalStorage. 
+    localStorage.setItem("QA", questionsAsked);
 
+};
+
+// shows the answer
 const showAnswer = () => {
-    document.querySelector("#answer").innerHTML = AnswerStart + JeopardyQuestions[previousRow][previousColumn].answer;
-}
+    document.querySelector("#answer").innerHTML = AnswerStart + JeopardyQuestions[currentRow][currentColumn].answer;
+};
 
+// add points to what ever team
+// if no question is selected add zero points
+// save the score to local storage
 const addPoints = (team) => {
-    document.querySelector(`#t${team}score`).innerHTML = parseInt(document.querySelector(`#t${team}score`).innerHTML) + JeopardyQuestions[previousRow][previousColumn].points;
-    // console.log(typeof(document.querySelector(`#t${team}score`).innerHTML))
-    // console.log(typeof(JeopardyQuestions[previousRow][previousColumn].points))
+    let points = 0;
+    if (currentRow != -1 && currentColumn != -1) {
+        points = JeopardyQuestions[currentRow][currentColumn].points;
+    }
+    document.querySelector(`#t${team}score`).innerHTML = parseInt(document.querySelector(`#t${team}score`).innerHTML) + points;
+    saveScore(team);
+
+};
+
+// sub points to what ever team
+// if no question is selected sub zero points
+// save the score to local storage
+const subPoints = (team) => {
+    let points = 0;
+    if (currentRow != -1 && currentColumn != -1) {
+        points = JeopardyQuestions[currentRow][currentColumn].points;
+    }
+    document.querySelector(`#t${team}score`).innerHTML = parseInt(document.querySelector(`#t${team}score`).innerHTML) - points;
+    saveScore(team);
+};
+
+// on refresh fill in any values from local storage
+window.onload = () => {
+    // Check if we already have an array in local storage.
+    let questionsAsked = localStorage.getItem("QA");
+
+    if (questionsAsked !== null) {
+        // Decode the array. 
+        questionsAsked = JSON.parse(questionsAsked);
+        // Add our new item. 
+        questionsAsked.forEach(cell => {
+            document.querySelector(cell).style.color = "#545353";
+        });
+
+        // Encode the array.
+        questionsAsked = JSON.stringify(questionsAsked);
+        // Add back to LocalStorage. 
+        localStorage.setItem("QA", questionsAsked);
+    }
+
+    saveTeam();
+};
+
+
+const saveScore = (team) => {
+    localStorage.setItem(`dataStorage-t${team}score`,document.querySelector(`#t${team}score`).innerHTML);
+
 }
 
-const subPoints = (team) => {
-    document.querySelector(`#t${team}score`).innerHTML = parseInt(document.querySelector(`#t${team}score`).innerHTML) - JeopardyQuestions[previousRow][previousColumn].points;
+// saves all the team names and scores if manually changed
+const saveTeam = () => {
+    let editables = document.querySelectorAll(`[contenteditable=true]`);
+    // save edits
+    editables.forEach(el => {
+        el.addEventListener("blur", () => {
+            localStorage.setItem("dataStorage-" + el.id, el.innerHTML);
+        });
+    });
 
+    // once on load
+    for (var key in localStorage) {
+        if (key.includes("dataStorage-")) {
+            const id = key.replace("dataStorage-", "");
+            document.querySelector("#" + id).innerHTML = localStorage.getItem(key);
+        }
+    }
 }
