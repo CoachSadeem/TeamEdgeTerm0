@@ -9,142 +9,202 @@ class JeopardyQuestion {
     }
 }
 // each question is made the same way
-// the lables are done so it is a 2D grid starting at 00 and ending at 44
+// the labels are done so it is a 2D grid starting at 00 and ending at 44
 J00 = new JeopardyQuestion();
-J00.question = `<br>
-const question5 = () => {<br>
-&emsp;let dog = {<br>
-&emsp;&emsp;name: "Rico",<br>
-&emsp;&emsp;age: 3,<br>
-&emsp;&emsp;breed: "Golden Poodle",<br>
-&emsp;};<br>
-&emsp;dog.breed = "Golden Doodle";<br>
-&emsp;console.log(\`\${dog.name} is Sadeem\'s \${dog.breed}!\`);<br>
-};<br><br>
-question5();<br>
-`;
-
-J00.answer = `Rico is Sadeem's Golden Doodle!`;
+J00.question = `When trying to search for the right tag in HTML I use this three word combo`;
+J00.answer = `What is <b>BLANK Tag HTML</b>?`;
 J00.points = 100;
 
 J10 = new JeopardyQuestion();
-J10.question = "Question 1,0";
-J10.answer = "Answer 1,0";
+J10.question = `Use these tags to create an unordered list and a list item`;
+J10.answer = `What is <b>&lt;ul&gt; and &lt;li&gt;</b>?`;
 J10.points = 200;
 
 J20 = new JeopardyQuestion();
-J20.question = "Question 2,0";
-J20.answer = "Answer 2,0";
+J20.question = `This attribute is used to specify the url of a link in an anchor tag`;
+J20.answer = `What is <b>href</b>?`;
 J20.points = 300;
 
 J30 = new JeopardyQuestion();
-J30.question = "Question 3,0";
-J30.answer = "Answer 3,0";
+J30.question = `The syntax name for what goes in between the opening and closing tab for a p element`;
+J30.answer = `What is <b>content or innerHTML</b>?`;
 J30.points = 400;
 
 J40 = new JeopardyQuestion();
-J40.question = "Question 4,0";
-J40.answer = "Answer 4,0";
+J40.question = `This is how you reference a stylesheet named style.css<br>
+(You have to write out the code)`;
+J40.answer = `What is <b>&lt;link rel="stylesheet" type="text/css" href="style.css" /&gt;</b>?`;
 J40.points = 500;
 
 J01 = new JeopardyQuestion();
-J01.question = "Question 0,1";
-J01.answer = "Answer 0,1";
+J01.question = `Using this css code I changed the font of Pizza into <p style="font-family:cursive;">Pizza</p>`;
+J01.answer = `What is <b>font-family: cursive</b>?`;
 J01.points = 100;
 
 J11 = new JeopardyQuestion();
-J11.question = "Question 1,1";
-J11.answer = "Answer 1,1";
+J11.question = `If my tag has the id of food I can use this selector`;
+J11.answer = `What is <b>#food</b>?
+`;
 J11.points = 200;
 
 J21 = new JeopardyQuestion();
-J21.question = "Question 2,1";
-J21.answer = "Answer 2,1";
+J21.question = `When modifying things using CSS we edit BLANK, (Not HTML elements)`;
+J21.answer = `What are <b>properties</b>?`;
 J21.points = 300;
 
 J31 = new JeopardyQuestion();
-J31.question = "Question 3,1";
-J31.answer = "Answer 3,1";
+J31.question = `I can use this tool in the browser to debug my website`;
+J31.answer = `What is <b>inspect/inspector</b>?`;
 J31.points = 400;
 
 J41 = new JeopardyQuestion();
-J41.question = "Question 4,1";
-J41.answer = "Answer 4,1";
+J41.question = `<div class="Jeopardy" onmouseover="Yellow()" onmouseleave="White()"
+style="border-style: dotted; border-color: green; border-width: 5px;">
+    <p style="text-align: center; color: black">Jeopardy</p>
+</div>
+<script>
+    const Yellow = () =>{
+        document.querySelector('.Jeopardy').style.background = "yellow";
+    };
+
+    const White = () =>{
+        document.querySelector('.Jeopardy').style.background = "white";
+    };
+</script>
+
+<ul>
+    <li>Make a div</li>
+    <ul>
+        <li>Give it the class Jeopardy</li>
+        <li>Give it a p tag with the word Jeopardy</li>
+        <li>Don't forget to align center the text</li>
+       </ul>
+    <li>Give it a Border </li>
+       <ul>
+        <li>Color: Green</li>
+        <li>Style: Dotted</li>
+        <li>Width: 5px</li>
+       </ul>
+    <li>Add Functionality</li>
+        <ul>
+        <li>Mouse Over: make the background yellow</li>
+        <li>Mouse Leave: make the background white</li>
+       </ul>
+</ul>`;
+J41.answer = `
+<span>
+<h2>HTML</h2>
+    &lt;div class="Jeopardy" onmouseover="Yellow()" onmouseleave="White()"&gt;<br>
+    &emsp;&lt;p&gt;Jeopardy&lt;/p&gt;<br>
+    &lt;/div&gt;
+<h2>CSS</h2>
+    .Jeopardy{<br>
+        &emsp;border-style: dotted;<br>
+        &emsp;border-color: green;<br>
+        &emsp;border-width: 5px;<br>
+        &emsp;text-align: center;<br>
+    }
+<h2>JavaScript</h2>
+    const Yellow = () =>{<br>
+        &emsp;document.querySelector('.Jeopardy').style.background = "yellow";<br>
+    };<br>
+    <br>
+    const White = () =>{<br>
+        &emsp;document.querySelector('.Jeopardy').style.background = "white";<br>
+    };
+</span>`;
 J41.points = 500;
 
 J02 = new JeopardyQuestion();
-J02.question = "Question 0,2";
-J02.answer = "Answer 0,2";
+J02.question = `The acronym DOM stands for`;
+J02.answer = `What is <b>Document Object Model</b>?`;
 J02.points = 100;
 
 J12 = new JeopardyQuestion();
-J12.question = "Question 1,2";
-J12.answer = "Answer 1,2";
+J12.question = `To change the color of the area of a div I use this property`;
+J12.answer = `What is <b>background</b>?`;
 J12.points = 200;
 
 J22 = new JeopardyQuestion();
-J22.question = "Question 2,2";
-J22.answer = "Answer 2,2";
+J22.question = `I use this function to access html elements in javascript`;
+J22.answer = `What is <b>querySelector</b>?`;
 J22.points = 300;
 
 J32 = new JeopardyQuestion();
-J32.question = "Question 3,2";
-J32.answer = "Answer 3,2";
+J32.question = `I use this function to save data for your website`;
+J32.answer = `What is <b>localStorage</b>?`;
 J32.points = 400;
 
 J42 = new JeopardyQuestion();
-J42.question = "Question 4,2";
-J42.answer = "Answer 4,2";
+J42.question = `The name of the html elements that go inside the form element`;
+J42.answer = `What is <b>input</b>?`;
 J42.points = 500;
 
 J03 = new JeopardyQuestion();
-J03.question = "Question 0,3";
-J03.answer = "Answer 0,3";
+J03.question = `BLANK is the text and images on a website`;
+J03.answer = `What is <b>content</b>?`;
 J03.points = 100;
 
 J13 = new JeopardyQuestion();
-J13.question = "Question 1,3";
-J13.answer = "Answer 1,3";
+J13.question = `Website that changes size based on different screens`;
+J13.answer = `What is <b>responsive</b>?`;
 J13.points = 200;
 
 J23 = new JeopardyQuestion();
-J23.question = "Question 2,3";
-J23.answer = "Answer 2,3";
+J23.question = `The group of colors you selected for your project `;
+J23.answer = `What is <b>color pallet</b>?`;
 J23.points = 300;
 
 J33 = new JeopardyQuestion();
-J33.question = "Question 3,3";
-J33.answer = "Answer 3,3";
+J33.question = `The name for the artform regarding the design and style of text`;
+J33.answer = `What is <b>typography</b>?`;
 J33.points = 400;
 
 J43 = new JeopardyQuestion();
-J43.question = "Question 4,3";
-J43.answer = "Answer 4,3";
+J43.question = `BLANK is organizing content into sections with an intuitive pattern, that helps people identify content quickly`;
+J43.answer = `What is <b>information hierarchy</b>?`;
 J43.points = 500;
 
 J04 = new JeopardyQuestion();
-J04.question = "Question 0,4";
-J04.answer = "Answer 0,4";
+J04.question = `Use this function to add to an array`;
+J04.answer = `What is <b>array.push(element)</b>`;
 J04.points = 100;
 
 J14 = new JeopardyQuestion();
-J14.question = "Question 1,4";
-J14.answer = "Answer 1,4";
+J14.question = `Instead of repeating code multiple times I can create one of these`;
+J14.answer = `What is a <b>function</b>?`;
 J14.points = 200;
 
 J24 = new JeopardyQuestion();
-J24.question = "Question 2,4";
-J24.answer = "Answer 2,4";
+J24.question = `A way to use data outside of a function when it finishes`;
+J24.answer = `What is <b>returns</b>?`;
 J24.points = 300;
 
 J34 = new JeopardyQuestion();
-J34.question = "Question 3,4";
-J34.answer = "Answer 3,4";
+J34.question = `Fix this bug<br>
+const READLINE = require("readline-sync");<br>
+const question = (num) => {<br>
+&emsp;console.log(num + 5);<br>
+};<br>
+let num = READLINE.question("Number: ");<br>
+question(num);<br>
+(Will accept multiple answers)`;
+J34.answer = `What is <b>turn num into an int</b>?`;
 J34.points = 400;
 
 J44 = new JeopardyQuestion();
-J44.question = "Question 4,4";
-J44.answer = "Answer 4,4";
+J44.question = `How many times will Hi print<br>
+const question = () => {<br>
+&emsp;for (let i = 0; i < 5; i++) {<br>
+&emsp;&emsp;for (let j = 0; j < 4; j++) {<br>
+&emsp;&emsp;&emsp;if (i % 2 == 0 && j % 3 == 0) {<br>
+&emsp;&emsp;&emsp;&emsp;console.log(\`Hi\`);<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+};<br>
+question();`;
+J44.answer = `What is <b>6 times</b>?`;
 J44.points = 500;
 
 // 2d array of all the questions
