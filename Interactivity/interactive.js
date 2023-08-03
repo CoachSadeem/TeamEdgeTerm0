@@ -10,54 +10,54 @@ class JeopardyQuestion {
 }
 // each question is made the same way
 // the labels are done so it is a 2D grid starting at 00 and ending at 44
-J00 = new JeopardyQuestion();
+let J00 = new JeopardyQuestion();
 J00.question = `When trying to search for the right tag in HTML I use this three word combo`;
 J00.answer = `What is <b>BLANK Tag HTML</b>?`;
 J00.points = 100;
 
-J10 = new JeopardyQuestion();
+let J10 = new JeopardyQuestion();
 J10.question = `Use these tags to create an unordered list and a list item`;
 J10.answer = `What is <b>&lt;ul&gt; and &lt;li&gt;</b>?`;
 J10.points = 200;
 
-J20 = new JeopardyQuestion();
+let J20 = new JeopardyQuestion();
 J20.question = `This attribute is used to specify the url of a link in an anchor tag`;
 J20.answer = `What is <b>href</b>?`;
 J20.points = 300;
 
-J30 = new JeopardyQuestion();
+let J30 = new JeopardyQuestion();
 J30.question = `The syntax name for what goes in between the opening and closing tab for a p element`;
 J30.answer = `What is <b>content or innerHTML</b>?`;
 J30.points = 400;
 
-J40 = new JeopardyQuestion();
+let J40 = new JeopardyQuestion();
 J40.question = `This is how you reference a stylesheet named style.css<br>
 (You have to write out the code)`;
 J40.answer = `What is <b>&lt;link rel="stylesheet" type="text/css" href="style.css" /&gt;</b>?`;
 J40.points = 500;
 
-J01 = new JeopardyQuestion();
+let J01 = new JeopardyQuestion();
 J01.question = `Using this css code I changed the font of Pizza into <p style="font-family:cursive;">Pizza</p>`;
 J01.answer = `What is <b>font-family: cursive</b>?`;
 J01.points = 100;
 
-J11 = new JeopardyQuestion();
+let J11 = new JeopardyQuestion();
 J11.question = `If my tag has the id of food I can use this selector`;
 J11.answer = `What is <b>#food</b>?
 `;
 J11.points = 200;
 
-J21 = new JeopardyQuestion();
+let J21 = new JeopardyQuestion();
 J21.question = `When modifying things using CSS we edit BLANK, (Not HTML elements)`;
 J21.answer = `What are <b>properties</b>?`;
 J21.points = 300;
 
-J31 = new JeopardyQuestion();
+let J31 = new JeopardyQuestion();
 J31.question = `I can use this tool in the browser to debug my website`;
 J31.answer = `What is <b>inspect/inspector</b>?`;
 J31.points = 400;
 
-J41 = new JeopardyQuestion();
+let J41 = new JeopardyQuestion();
 J41.question = `<div class="Jeopardy" onmouseover="Yellow()" onmouseleave="White()"
 style="border-style: dotted; border-color: green; border-width: 5px;">
     <p style="text-align: center; color: black">Jeopardy</p>
@@ -115,72 +115,72 @@ J41.answer = `
 </span>`;
 J41.points = 500;
 
-J02 = new JeopardyQuestion();
+let J02 = new JeopardyQuestion();
 J02.question = `The acronym DOM stands for`;
 J02.answer = `What is <b>Document Object Model</b>?`;
 J02.points = 100;
 
-J12 = new JeopardyQuestion();
+let J12 = new JeopardyQuestion();
 J12.question = `To change the color of the area of a div I use this property`;
 J12.answer = `What is <b>background</b>?`;
 J12.points = 200;
 
-J22 = new JeopardyQuestion();
+let J22 = new JeopardyQuestion();
 J22.question = `I use this function to access html elements in javascript`;
 J22.answer = `What is <b>querySelector</b>?`;
 J22.points = 300;
 
-J32 = new JeopardyQuestion();
+let J32 = new JeopardyQuestion();
 J32.question = `I use this function to save data for your website`;
 J32.answer = `What is <b>localStorage</b>?`;
 J32.points = 400;
 
-J42 = new JeopardyQuestion();
+let J42 = new JeopardyQuestion();
 J42.question = `The name of the html elements that go inside the form element`;
 J42.answer = `What is <b>input</b>?`;
 J42.points = 500;
 
-J03 = new JeopardyQuestion();
+let J03 = new JeopardyQuestion();
 J03.question = `BLANK is the text and images on a website`;
 J03.answer = `What is <b>content</b>?`;
 J03.points = 100;
 
-J13 = new JeopardyQuestion();
+let J13 = new JeopardyQuestion();
 J13.question = `Website that changes size based on different screens`;
 J13.answer = `What is <b>responsive</b>?`;
 J13.points = 200;
 
-J23 = new JeopardyQuestion();
+let J23 = new JeopardyQuestion();
 J23.question = `The group of colors you selected for your project `;
 J23.answer = `What is <b>color pallet</b>?`;
 J23.points = 300;
 
-J33 = new JeopardyQuestion();
+let J33 = new JeopardyQuestion();
 J33.question = `The name for the artform regarding the design and style of text`;
 J33.answer = `What is <b>typography</b>?`;
 J33.points = 400;
 
-J43 = new JeopardyQuestion();
+let J43 = new JeopardyQuestion();
 J43.question = `BLANK is organizing content into sections with an intuitive pattern, that helps people identify content quickly`;
 J43.answer = `What is <b>information hierarchy</b>?`;
 J43.points = 500;
 
-J04 = new JeopardyQuestion();
+let J04 = new JeopardyQuestion();
 J04.question = `Use this function to add to an array`;
 J04.answer = `What is <b>array.push(element)</b>`;
 J04.points = 100;
 
-J14 = new JeopardyQuestion();
+let J14 = new JeopardyQuestion();
 J14.question = `Instead of repeating code multiple times I can create one of these`;
 J14.answer = `What is a <b>function</b>?`;
 J14.points = 200;
 
-J24 = new JeopardyQuestion();
+let J24 = new JeopardyQuestion();
 J24.question = `A way to use data outside of a function when it finishes`;
 J24.answer = `What is <b>returns</b>?`;
 J24.points = 300;
 
-J34 = new JeopardyQuestion();
+let J34 = new JeopardyQuestion();
 J34.question = `Fix this bug<br>
 const READLINE = require("readline-sync");<br>
 const question = (num) => {<br>
@@ -192,7 +192,7 @@ question(num);<br>
 J34.answer = `What is <b>turn num into an int</b>?`;
 J34.points = 400;
 
-J44 = new JeopardyQuestion();
+let J44 = new JeopardyQuestion();
 J44.question = `How many times will Hi print<br>
 const question = () => {<br>
 &emsp;for (let i = 0; i < 5; i++) {<br>
